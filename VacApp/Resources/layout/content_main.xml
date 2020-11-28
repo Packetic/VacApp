@@ -124,11 +124,5 @@
         android:layout_height="11.5dp"
         android:background="#FFFFFF"/>
 
-    <TextView
-        android:text=" "
-        android:id="@+id/SerializeField"
-        android:layout_width="match_parent"
-        android:layout_height="55.5dp" />
-
 </TableLayout>
 

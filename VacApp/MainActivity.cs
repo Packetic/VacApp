@@ -15,7 +15,8 @@ namespace VacApp
     [Activity(Label = "XMLParser", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
     public class MainActivity : AppCompatActivity
     {
-        TextView id_1, id_2, id_3, id_4, id_5, id_6, ser_field;
+        // creating fields
+        TextView id_1, id_2, id_3, id_4, id_5, id_6;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -28,6 +29,7 @@ namespace VacApp
             FloatingActionButton fab = FindViewById<FloatingActionButton>(Resource.Id.fab);
             fab.Click += FabOnClick;
 
+            // creating field references
             id_1 = FindViewById<TextView>(Resource.Id.Offer1);
             id_2 = FindViewById<TextView>(Resource.Id.Offer2);
             id_3 = FindViewById<TextView>(Resource.Id.Offer3);
@@ -35,8 +37,7 @@ namespace VacApp
             id_5 = FindViewById<TextView>(Resource.Id.Offer5);
             id_6 = FindViewById<TextView>(Resource.Id.Offer6);
 
-            ser_field = FindViewById<TextView>(Resource.Id.SerializeField);
-
+            // button click
             FindViewById<Button>(Resource.Id.ButtonParse).Click += async (o, e) =>
             {
                 var result = await XmlParser("https://yastatic.net/market-export/_/partner/help/YML.xml");
@@ -50,6 +51,7 @@ namespace VacApp
             };
         }
 
+        // function for parsing an XML file from web via URL
         public async Task<string> XmlParser(string URL)
         {
             // block of settings 
