@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:stretchColumns="1">
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="55.5dp"
+        android:background="#FFFFFF"/>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="id_1"
+            android:padding="3dip"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:padding="3dip"
+            android:text="0"
+            android:id="@+id/Offer1" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="id_2"
+            android:gravity="left"
+            android:padding="3dip"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:gravity="right"
+            android:padding="3dip"
+            android:id="@+id/Offer2" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="id_3"
+            android:padding="3dip"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:gravity="right"
+            android:padding="3dip"
+            android:id="@+id/Offer3" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="id_4"
+            android:padding="3dip"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:gravity="right"
+            android:padding="3dip"
+            android:id="@+id/Offer4" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="64.5dp"
+            android:layout_height="match_parent"
+            android:text="id_5"
+            android:padding="3dip"/>
+        <TextView
+            android:layout_width="245.0dp"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:gravity="right"
+            android:padding="3dip"
+            android:id="@+id/Offer5" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="id_6"
+            android:padding="3dip"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:gravity="right"
+            android:padding="3dip"
+            android:id="@+id/Offer6" />
+    </TableRow>
+
+    <Button
+        android:text="Parse"
+        android:id="@+id/ButtonParse"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="11.5dp"
+        android:background="#FFFFFF"/>
+
+    <TextView
+        android:text=" "
+        android:id="@+id/SerializeField"
+        android:layout_width="match_parent"
+        android:layout_height="55.5dp" />
+
+</TableLayout>
+
