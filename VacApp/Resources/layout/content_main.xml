@@ -13,11 +13,13 @@
     <TableRow
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="id_1"
-            android:padding="3dip"/>
+        <Button
+            android:layout_width="95.0dp"
+            android:layout_height="34.0dp"
+            android:text="Id 1"
+            android:layout_marginBottom="0.0dp"
+            android:layout_marginTop="0.0dp"
+            android:id="@+id/id1" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -30,12 +32,13 @@
     <TableRow
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="id_2"
-            android:gravity="left"
-            android:padding="3dip"/>
+        <Button
+            android:layout_width="95.0dp"
+            android:layout_height="34.0dp"
+            android:text="Id 2"
+            android:layout_marginBottom="0.0dp"
+            android:layout_marginTop="0.0dp"
+            android:id="@+id/id2" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -48,11 +51,13 @@
     <TableRow
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="id_3"
-            android:padding="3dip"/>
+        <Button
+            android:layout_width="95.0dp"
+            android:layout_height="34.0dp"
+            android:text="Id 3"
+            android:layout_marginBottom="0.0dp"
+            android:layout_marginTop="0.0dp"
+            android:id="@+id/id3" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -65,11 +70,13 @@
     <TableRow
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="id_4"
-            android:padding="3dip"/>
+        <Button
+            android:layout_width="95.0dp"
+            android:layout_height="34.0dp"
+            android:text="Id 4"
+            android:layout_marginBottom="0.0dp"
+            android:layout_marginTop="0.0dp"
+            android:id="@+id/id4" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -82,11 +89,13 @@
     <TableRow
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <TextView
-            android:layout_width="64.5dp"
-            android:layout_height="match_parent"
-            android:text="id_5"
-            android:padding="3dip"/>
+        <Button
+            android:layout_width="95.0dp"
+            android:layout_height="34.0dp"
+            android:text="Id 5"
+            android:layout_marginBottom="0.0dp"
+            android:layout_marginTop="0.0dp"
+            android:id="@+id/id5" />
         <TextView
             android:layout_width="245.0dp"
             android:layout_height="wrap_content"
@@ -99,11 +108,13 @@
     <TableRow
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="id_6"
-            android:padding="3dip"/>
+        <Button
+            android:layout_width="95.0dp"
+            android:layout_height="34.0dp"
+            android:text="Id 6"
+            android:layout_marginBottom="0.0dp"
+            android:layout_marginTop="0.0dp"
+            android:id="@+id/id6" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -118,11 +129,6 @@
         android:id="@+id/ButtonParse"
         android:layout_height="wrap_content"
         android:layout_width="match_parent" />
-
-    <View
-        android:layout_width="wrap_content"
-        android:layout_height="11.5dp"
-        android:background="#FFFFFF"/>
 
 </TableLayout>
 

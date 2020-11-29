@@ -1,14 +1,18 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 using Android.App;
+using Android.Content;
 using Android.OS;
 using Android.Runtime;
 using Android.Support.Design.Widget;
 using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace VacApp
 {
@@ -17,7 +21,7 @@ namespace VacApp
     {
         // creating fields
         TextView id_1, id_2, id_3, id_4, id_5, id_6;
-        protected override void OnCreate(Bundle savedInstanceState)
+        protected async override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
@@ -37,17 +41,70 @@ namespace VacApp
             id_5 = FindViewById<TextView>(Resource.Id.Offer5);
             id_6 = FindViewById<TextView>(Resource.Id.Offer6);
 
+            var JsonField = FindViewById<TextView>(Resource.Id.JsonField); // to change text on second window
+            var result = await XmlParser("https://yastatic.net/market-export/_/partner/help/YML.xml");
+            string[] IdList = result.Split(" ");
+
+            // initializing new intent to navigate between pages
+            Intent JsonWindow = new Intent(this, typeof(SerializeActivity));
+
             // button click
-            FindViewById<Button>(Resource.Id.ButtonParse).Click += async (o, e) =>
+            FindViewById<Button>(Resource.Id.ButtonParse).Click += (o, e) =>
             {
-                var result = await XmlParser("https://yastatic.net/market-export/_/partner/help/YML.xml");
-                string[] IdList = result.Split(" ");
                 id_1.Text = IdList[0];
                 id_2.Text = IdList[1];
                 id_3.Text = IdList[2];
                 id_4.Text = IdList[3];
                 id_5.Text = IdList[4];
                 id_6.Text = IdList[5];
+            };
+
+            // First element to JSON
+            FindViewById<Button>(Resource.Id.id1).Click += (o, e) => 
+            {
+                var JsonStr = JsonConvert.SerializeObject(id_1.Text);
+                JsonWindow.PutExtra("Sample", JsonStr);
+                StartActivity(JsonWindow);
+            };
+
+            // Second button
+            FindViewById<Button>(Resource.Id.id2).Click += (o, e) =>
+            {
+                var JsonStr = JsonConvert.SerializeObject(id_2.Text);
+                JsonWindow.PutExtra("Sample", JsonStr);
+                StartActivity(JsonWindow);
+            };
+
+            // Third button 
+            FindViewById<Button>(Resource.Id.id3).Click += (o, e) =>
+            {
+                var JsonStr = JsonConvert.SerializeObject(id_3.Text);
+                JsonWindow.PutExtra("Sample", JsonStr);
+                StartActivity(JsonWindow);
+            };
+
+            // Fourth button
+            FindViewById<Button>(Resource.Id.id4).Click += (o, e) =>
+            {
+                var JsonStr = JsonConvert.SerializeObject(id_4.Text);
+                JsonWindow.PutExtra("Sample", JsonStr);
+                StartActivity(JsonWindow);
+            };
+
+            // Fifth button
+            FindViewById<Button>(Resource.Id.id5).Click += (o, e) =>
+            {
+                var JsonStr = JsonConvert.SerializeObject(id_5.Text);
+                JsonWindow.PutExtra("Sample", JsonStr);
+                StartActivity(JsonWindow);
+            };
+
+            // Sixth button
+            FindViewById<Button>(Resource.Id.id6).Click += (o, e) =>
+            {
+                var JsonStr = JsonConvert.SerializeObject(id_6.Text);
+                JsonWindow.PutExtra("Sample", JsonStr);
+                StartActivity(JsonWindow);
             };
         }
 
